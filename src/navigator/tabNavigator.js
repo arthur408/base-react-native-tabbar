@@ -13,8 +13,7 @@ const TabNavigator = createBottomTabNavigator(
     One : FirstScreen,
     Two : SecondScreen,
     Three: ThirdScreen,
-    Four: ForthScreen,
-    Five: FifthScreen
+    Four: ForthScreen
   }, {
 
   }
