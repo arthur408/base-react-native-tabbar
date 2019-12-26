@@ -1,5 +1,6 @@
 // Tab Navigator
 
+import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import FirstScreen  from '../screens/first';
@@ -8,14 +9,42 @@ import ThirdScreen  from '../screens/thrid';
 import ForthScreen  from '../screens/forth';
 import FifthScreen  from '../screens/fifth';
 
+import TabIcon from '../components/tabIcon';
+
 const TabNavigator = createBottomTabNavigator(
   {
-    One : FirstScreen,
-    Two : SecondScreen,
-    Three: ThirdScreen,
-    Four: ForthScreen
+    One: { 
+      screen: FirstScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <TabIcon name='home' color={tintColor} />
+      }
+    },
+    Two: {
+      screen: SecondScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <TabIcon name='utensils' color={tintColor} />
+      }
+    },
+    Three: {
+      screen: ThirdScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <TabIcon name='heart' color={tintColor} />
+      }
+    },
+    Four: {
+      screen: ForthScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <TabIcon name='shopping-cart' color={tintColor} />
+      }
+    }
   }, {
+    defaultNavigationOptions: ({ navigation }) => ({
 
+    }),
+    tabBarOptions: {
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    },
   }
 );
 
