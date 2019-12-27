@@ -22,7 +22,7 @@ const TabNavigator = createBottomTabNavigator(
     Two: {
       screen: SecondScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='utensils' color={tintColor} />
+        tabBarIcon: ({ tintColor }) => <TabIcon name='bell' color={tintColor} badgeCount={3} />
       }
     },
     Three: {
