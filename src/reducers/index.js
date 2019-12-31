@@ -2,8 +2,10 @@
 
 import { combineReducers } from 'redux';
 
-const appReducer = combineReducers({
+import firstReducer from './first';
 
+const appReducer = combineReducers({
+  first: firstReducer
 });
 
 const reducer = (state, action) => {

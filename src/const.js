@@ -8,7 +8,9 @@ const constants = {
     height: Dimensions.get("window").height,
   },
   colors: {
-    sky: 'rgb(0, 196, 239)'
+    tint: '#025E2B',
+    grey: '#B1BACE',
+    bg: '#F2F5FB'
   }
 }
 

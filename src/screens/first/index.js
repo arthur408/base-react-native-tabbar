@@ -3,9 +3,13 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import Base from '../../components/base';
+
 class FirstScreen extends React.Component {
   render() {
-    return ( <View /> );
+    return ( 
+      <Base /> 
+    );
   }
 }
 

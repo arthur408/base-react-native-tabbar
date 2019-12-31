@@ -8,8 +8,9 @@ import SecondScreen from '../screens/second';
 import ThirdScreen  from '../screens/thrid';
 import ForthScreen  from '../screens/forth';
 import FifthScreen  from '../screens/fifth';
-
 import TabIcon from '../components/tabIcon';
+
+import constants from '../const';
 
 const TabNavigator = createBottomTabNavigator(
   {
@@ -34,6 +35,12 @@ const TabNavigator = createBottomTabNavigator(
     Four: {
       screen: ForthScreen,
       navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <TabIcon name='star' color={tintColor} />
+      }
+    },
+    Five: {
+      screen: FifthScreen,
+      navigationOptions: {
         tabBarIcon: ({ tintColor }) => <TabIcon name='shopping-cart' color={tintColor} />
       }
     }
@@ -42,7 +49,7 @@ const TabNavigator = createBottomTabNavigator(
 
     }),
     tabBarOptions: {
-      activeTintColor: 'tomato',
+      activeTintColor: constants.colors.tint,
       inactiveTintColor: 'gray',
     },
   }

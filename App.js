@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ReduxNetworkProvider } from 'react-native-offline';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import AppContainer from './src';
@@ -17,9 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <ReduxNetworkProvider>
-          <AppContainer />
-        </ReduxNetworkProvider>
+        <AppContainer />
       </Provider>
     );
   }

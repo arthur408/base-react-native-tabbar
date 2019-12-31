@@ -3,9 +3,13 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import Base from '../../components/base';
+
 class SecondScreen extends React.Component {
   render() {
-    return ( <View /> );
+    return ( 
+      <Base /> 
+    );
   }
 }
 
