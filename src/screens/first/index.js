@@ -7,7 +7,7 @@ import Base from '../../components/base';
 
 class FirstScreen extends React.Component {
   render() {
-    return ( 
+    return (
       <Base /> 
     );
   }

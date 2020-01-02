@@ -1,11 +1,14 @@
 // App
 
 import React from 'react';
+import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import AppContainer from './src';
 import store from './src/store';
+
+import constants from './src/const';
 
 class App extends React.Component {
 
@@ -16,7 +19,9 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <AppContainer />
+        <View style={{ flex: 1, backgroundColor: constants.colors.bg }}>
+          <AppContainer />
+        </View>
       </Provider>
     );
   }
