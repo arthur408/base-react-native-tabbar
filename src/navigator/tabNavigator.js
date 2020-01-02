@@ -10,6 +10,7 @@ import ForthScreen  from '../screens/forth';
 import FifthScreen  from '../screens/fifth';
 import TabIcon from '../components/tabIcon';
 
+import SVG from '../assets/svg';
 import constants from '../const';
 
 const TabNavigator = createBottomTabNavigator(
@@ -17,31 +18,31 @@ const TabNavigator = createBottomTabNavigator(
     One: { 
       screen: FirstScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='home' color={tintColor} />
+        tabBarIcon: ({ focused }) => focused ? <SVG.IconHomeActive width={22} height={20} /> : <SVG.IconHome width={22} height={20} />
       }
     },
     Two: {
       screen: SecondScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='bell' color={tintColor} badgeCount={3} />
+        tabBarIcon: ({ focused }) => focused ? <SVG.IconUtensilActive width={18} height={20} /> : <SVG.IconUtensil width={18} height={20} />
       }
     },
     Three: {
       screen: ThirdScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='heart' color={tintColor} />
+        tabBarIcon: ({ focused }) => focused ? <SVG.IconFoodActive width={25} height={17} /> : <SVG.IconFood width={25} height={17} />
       }
     },
     Four: {
       screen: ForthScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='star' color={tintColor} />
+        tabBarIcon: ({ focused }) => focused ? <SVG.IconHeartActive width={22} height={20} /> : <SVG.IconHeart width={22} height={20} />
       }
     },
     Five: {
       screen: FifthScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <TabIcon name='shopping-cart' color={tintColor} />
+        tabBarIcon: ({ focused }) => focused ? <SVG.IconCheckoutActive width={21} height={21} /> : <SVG.IconCheckout width={21} height={21} />
       }
     }
   }, {
@@ -49,8 +50,8 @@ const TabNavigator = createBottomTabNavigator(
 
     }),
     tabBarOptions: {
-      activeTintColor: 'red', //constants.colors.tint,
-      inactiveTintColor: 'gray',
+      activeTintColor: constants.colors.tint,
+      inactiveTintColor: constants.colors.grey,
       style: {
         borderTopColor: 'transparent',
         borderTopLeftRadius: 25,
