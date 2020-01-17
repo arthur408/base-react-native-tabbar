@@ -10,3 +10,9 @@ This project is totally basic project. It has a tabbar with 4 tabs and every tab
 `$ git clone https://github.com/arthur408/base-react-native-tabbar.git`
 
 `$ yarn install`
+
+### Link
+#### For iOS
+`$ cd ios && pod install`
+
+### Usage
