@@ -53,11 +53,11 @@ And here is the file defined Tab Navigation with the SVG icons.
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import FirstScreen  from '../screens/first';
-import SecondScreen from '../screens/second';
-import ThirdScreen  from '../screens/thrid';
-import ForthScreen  from '../screens/forth';
-import FifthScreen  from '../screens/fifth';
+import FirstScreen  from '../screens/first';      // Screen for 1st tab
+import SecondScreen from '../screens/second';     // Screen for 2nd tab
+import ThirdScreen  from '../screens/thrid';      // Screen for 3rd tab
+import ForthScreen  from '../screens/forth';      // Screen for 4th tab
+import FifthScreen  from '../screens/fifth';      // Screen for 5th tab
 import TabIcon from '../components/tabIcon';
 
 import SVG from '../assets/svg';
@@ -65,31 +65,31 @@ import constants from '../const';
 
 const TabNavigator = createBottomTabNavigator(
   {
-    One: { 
+    One: {    // 1st tab name
       screen: FirstScreen,
       navigationOptions: {
         tabBarIcon: ({ focused }) => focused ? <SVG.IconHomeActive width={22} height={20} /> : <SVG.IconHome width={22} height={20} />
       }
     },
-    Two: {
+    Two: {    // 2nd tab name
       screen: SecondScreen,
       navigationOptions: {
         tabBarIcon: ({ focused }) => focused ? <SVG.IconUtensilActive width={18} height={20} /> : <SVG.IconUtensil width={18} height={20} />
       }
     },
-    Three: {
+    Three: {  // 3rd tab name
       screen: ThirdScreen,
       navigationOptions: {
         tabBarIcon: ({ focused }) => focused ? <SVG.IconFoodActive width={25} height={17} /> : <SVG.IconFood width={25} height={17} />
       }
     },
-    Four: {
+    Four: {   // 4th tab name
       screen: ForthScreen,
       navigationOptions: {
         tabBarIcon: ({ focused }) => focused ? <SVG.IconHeartActive width={22} height={20} /> : <SVG.IconHeart width={22} height={20} />
       }
     },
-    Five: {
+    Five: {   // 5th tab name
       screen: FifthScreen,
       navigationOptions: {
         tabBarIcon: ({ focused }) => focused ? <SVG.IconCheckoutActive width={21} height={21} /> : <SVG.IconCheckout width={21} height={21} />
